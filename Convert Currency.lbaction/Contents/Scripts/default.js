@@ -1,14 +1,17 @@
-include("shared/notify.js");
-include("shared/history.js");
+include("shared/lib/notify.js");
+include("shared/lib/history.js");
 include("api.js");
 
 function runWithString(string) {
-    string = string.trim();
+    if (LaunchBar.options.commandKey) {
+        return Lib.Notify.force_prompt();
+    }
 
+    string = string.trim();
     try {
-        var match = string.match(/([\d\.]+)\s*([\w]{3})\s*(to|in|:)\s*([\w]{3})/);
+        var match = string.replace(",","").match(/([\d\.]+)\s*([\w]{3})\s*(to|in|:)\s*([\w]{3})/);
         if (match === null || match.length != 5)
-            throw "Your input wasn't formatted correctly!\nProper example: 100 USD to JPY";
+            throw "Your input wasn't formatted correctly!\n\nProper example: 100 USD to JPY";
 
         var amt = parseFloat(match[1]).toFixed(2);
         var from = match[2].toUpperCase();
@@ -40,6 +43,8 @@ function runWithString(string) {
             }
         ];
     } catch (err) {
+        Lib.Cache.clear(from + "-" + to);
+        Lib.Cache.clear(to + "-" + from);
         Lib.Notify.error(err);
     }
 }
