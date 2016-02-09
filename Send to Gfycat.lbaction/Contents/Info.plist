@@ -13,7 +13,7 @@
     <!-- <value>1.0</value> -->
 
     <key>CFBundleVersion</key>
-    <string>1.2</string>
+    <string>1.2.1</string>
 
     <key>CFBundleIconFile</key>
     <string>iconTemplate</string>
@@ -60,13 +60,13 @@
         <string>Henrik Lissner</string>
 
         <key>LBWebsite</key>
-        <string>http://henrik.io</string>
+        <string>http://v0.io/launchbar</string>
 
         <key>LBEmail</key>
         <string>henrik@lissner.net</string>
 
         <key>LBTwitter</key>
-        <string>@HenrikLissner</string>
+        <string>@vnought</string>
 
         <!-- A short summary about what the action does and how it’s used. -->
         <key>LBSummary</key>
@@ -91,6 +91,12 @@
              a certain version of an app to be installed. -->
         <!-- <key>LBRequirements</key> -->
         <!-- <string>You must have the haste gem installed</string> -->
+
+        <key>LBUpdateURL</key>
+        <string>https://raw.githubusercontent.com/hlissner/lb6-actions/master/Send to Gfycat.lbaction/Contents/Info.plist</string>
+
+        <key>LBDownloadURL</key>
+        <string>https://v0.io/dl/launchbar/Send to Gfycat.lbaction.zip</string>
     </dict>
 
 </dict>

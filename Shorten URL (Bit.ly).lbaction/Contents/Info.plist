@@ -2,52 +2,103 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleIconFile</key>
-	<string>icon</string>
-	<key>CFBundleIdentifier</key>
-	<string>io.henrik.launchbar.ShortenURLBitly</string>
-	<key>CFBundleName</key>
-	<string>Shorten URL (Bit.ly)</string>
-	<key>CFBundleVersion</key>
-	<string>1.2.4</string>
-	<key>LBArgument</key>
-	<string>The long URL to be shortened</string>
-	<key>LBDebugLogEnabled</key>
-	<true/>
-	<key>LBDescription</key>
-	<dict>
-		<key>LBArgument</key>
-		<string>The long URL to be shortened</string>
-		<key>LBAuthor</key>
-		<string>Henrik Lissner</string>
-		<key>LBEmail</key>
-		<string>henrik@lissner.net</string>
-		<key>LBSummary</key>
-		<string>Shortens an url and returns the bit.ly link. Will request your api key on first use.</string>
-		<key>LBTwitter</key>
-		<string>@HenrikLissner</string>
-		<key>LBWebsite</key>
-		<string>http://henrik.io</string>
-	</dict>
-	<key>LBScripts</key>
-	<dict>
-		<key>LBDefaultScript</key>
-		<dict>
-			<key>LBAcceptedArgumentTypes</key>
-			<array>
-				<string>string</string>
-			</array>
-			<key>LBKeepWindowActive</key>
-			<true/>
-			<key>LBRequiresArgument</key>
-			<true/>
-			<key>LBResultType</key>
-			<string>unknown</string>
-			<key>LBReturnsResult</key>
-			<true/>
-			<key>LBScriptName</key>
-			<string>default.js</string>
-		</dict>
-	</dict>
+
+    <key>CFBundleIdentifier</key>
+    <string>io.henrik.launchbar.ShortenURLBitly</string>
+
+    <key>CFBundleName</key>
+    <string>Shorten URL (Bit.ly)</string>
+
+    <!-- <key>CFBundleShortVersionString</key> -->
+    <!-- <value>1.0</value> -->
+
+    <key>CFBundleVersion</key>
+    <string>1.2.5</string>
+
+    <key>CFBundleIconFile</key>
+    <string>icon</string>
+
+    <key>LBDebugLogEnabled</key>
+    <false />
+
+    <!-- LB stuff -->
+    <!-- <key>LSMinimumSystemVersion</key> -->
+    <!-- <string>10.9.1</string> -->
+
+    <!-- Per-action keys -->
+    <!-- <key>LBTextInputTitle</key> -->
+    <!-- <string>Rate</string> -->
+
+    <key>LBScripts</key>
+    <dict>
+        <key>LBDefaultScript</key>
+        <dict>
+            <key>LBScriptName</key>
+            <string>default.js</string>
+
+            <key>LBRunInBackground</key>
+            <false />
+
+            <key>LBRequiresArgument</key>
+            <true />
+
+            <key>LBAcceptedArgumentTypes</key>
+            <array>
+                <string>string</string>
+            </array>
+
+            <key>LBReturnsResult</key>
+            <true />
+
+            <key>LBReturnType</key>
+            <string>string</string>
+        </dict>
+    </dict>
+
+    <key>LBDescription</key>
+    <dict>
+        <key>LBAuthor</key>
+        <string>Henrik Lissner</string>
+
+        <key>LBWebsite</key>
+        <string>http://v0.io/launchbar</string>
+
+        <key>LBEmail</key>
+        <string>henrik@lissner.net</string>
+
+        <key>LBTwitter</key>
+        <string>@vnought</string>
+
+        <!-- A short summary about what the action does and how it’s used. -->
+        <key>LBSummary</key>
+        <string>Shortens an url and returns the bit.ly link. Will request your api key on first use.</string>
+
+        <!-- Describe the arguments that should be passed to the action. For example, if
+             your action’s default script specifies that it accepts paths via
+             LBAcceptedArgumentTypes, but then the script itself checks that the user
+             passed in a PDF file, this would be the right place to document that. -->
+        <key>LBArgument</key>
+        <string>The long URL to be shortened</string>
+
+        <!-- Describe the action’s result. For example, an action fetching news via RSS
+             that then shows a list of items representing the single stories in the RSS
+             feed could document here that the resulting items represent the news
+             articles. -->
+        <!-- <key>LBResult</key> -->
+        <!-- <string></string> -->
+
+        <!-- Describe any further requirements for your action to work, e.g. if it
+             requires an active internet connection, iTunes to be playing a song, or
+             a certain version of an app to be installed. -->
+        <!-- <key>LBRequirements</key> -->
+        <!-- <string></string> -->
+
+        <key>LBUpdateURL</key>
+        <string>https://raw.githubusercontent.com/hlissner/lb6-actions/master/Shorten URL (Bit.ly).lbaction/Contents/Info.plist</string>
+
+        <key>LBDownloadURL</key>
+        <string>https://v0.io/dl/launchbar/Shorten URL (Bit.ly).lbaction.zip</string>
+    </dict>
+
 </dict>
 </plist>

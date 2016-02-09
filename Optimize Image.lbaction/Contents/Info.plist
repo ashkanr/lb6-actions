@@ -13,7 +13,7 @@
     <!-- <value>1.0</value> -->
 
     <key>CFBundleVersion</key>
-    <string>1.4</string>
+    <string>1.4.1</string>
 
     <key>CFBundleIconFile</key>
     <string>at.obdev.LaunchBar:Image_Compress</string>
@@ -67,7 +67,7 @@
         <string>Henrik Lissner</string>
 
         <key>LBWebsite</key>
-        <string>http://vnought.io</string>
+        <string>http://v0.io/launchbar</string>
 
         <key>LBEmail</key>
         <string>henrik@lissner.net</string>
@@ -98,6 +98,12 @@
              a certain version of an app to be installed. -->
         <key>LBRequirements</key>
         <string>You must have ImageAlpha and/or ImageOptim installed.</string>
+
+        <key>LBUpdateURL</key>
+        <string>https://raw.githubusercontent.com/hlissner/lb6-actions/master/Optimize Image.lbaction/Contents/Info.plist</string>
+
+        <key>LBDownloadURL</key>
+        <string>https://v0.io/dl/launchbar/Optimize Image.lbaction.zip</string>
     </dict>
 
 </dict>
